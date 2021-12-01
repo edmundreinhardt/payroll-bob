@@ -1,0 +1,7 @@
+{
+    "curlib": "&objlib",
+    "objlib": "&objlib",
+    "preUsrlibl": [],
+    "postUsrlibl": [],
+    "setIBMiEnvCmd": []
+}
