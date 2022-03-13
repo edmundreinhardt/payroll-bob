@@ -1,6 +1,6 @@
 --  Employee Master
 --  Generated on:              	11/03/21 14:32:20 
-CREATE TABLE EMPMST ( 
+CREATE OR REPLACE TABLE EMPMST ( 
 --  SQL150B   10   REUSEDLT(*NO) in table EMPMST in PAYROLL1 ignored. 
 	ACREC CHAR(1) CCSID 37 NOT NULL DEFAULT '' , 
 	EMPNO DECIMAL(6, 0) NOT NULL DEFAULT 0 , 

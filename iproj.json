@@ -1,7 +1,7 @@
 {
-    "curlib": "&objlib",
-    "objlib": "&objlib",
-    "preUsrlibl": [],
+    "curlib": "&dtalib",
+    "objlib": "&pgmlib",
+    "preUsrlibl": ["&pgmlib"],
     "postUsrlibl": [],
     "setIBMiEnvCmd": []
 }
