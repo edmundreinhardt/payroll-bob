@@ -30,12 +30,11 @@ ctl-opt Dftactgrp(*no);
  Dcl-F EMPMST     Usage(*Update:*Delete:*Output) Keyed;
  Dcl-F PRJMST     Usage(*Update:*Delete:*Output) Keyed;
  Dcl-F RSNMST     Usage(*Update:*Delete:*Output) Keyed;
- //
- //   Compile time array containing error descriptions.
- Dcl-S ERR             Char(50)        DIM(10) CTDATA PERRCD(1);
+
  Dcl-S EMESS           Char(50);
 
- Dcl-C INVALID_ACTION_CODE 4;
+/include includes/errorTable.rpgleinc
+
  //
  // *****************************************************
  //   MAINLINE CALCULATIONS
@@ -335,7 +334,8 @@ Dcl-Proc EmployeeMaintenance;
  End-Proc;
 
  // *******************************************************
- // Return true iff a previously record should be readded to file
+ // Return true iff a previously deleted record 
+ // should be readded to file
  Dcl-Proc isAddPreviouslyDeletedRecordRequest;
    Dcl-Pi *n ind End-Pi;
    Return  ACODE = 'A' and *IN50 and ACREC = 'D';
@@ -381,7 +381,7 @@ Dcl-Proc EmployeeMaintenance;
    or
          RSNAPL <> ' '
      and RSNAPL <> 'X';
-     DisplayError(1);
+     DisplayError(INVALID_MAINTENANCE_SELECTION);
    EndIf;
  End-Proc;
  //

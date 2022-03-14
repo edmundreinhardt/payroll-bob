@@ -3,5 +3,7 @@
     "objlib": "&pgmlib",
     "preUsrlibl": ["&pgmlib"],
     "postUsrlibl": [],
-    "setIBMiEnvCmd": []
+    "setIBMiEnvCmd": [],
+    "includePath": "includes",
+    "repository": "https://github.com/edmundreinhardt/payroll-bob"
 }
