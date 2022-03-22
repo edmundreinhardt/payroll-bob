@@ -4,6 +4,6 @@
     "preUsrlibl": ["&pgmlib"],
     "postUsrlibl": [],
     "setIBMiEnvCmd": [],
-    "includePath": "includes",
+    "includePath": ["includes"],
     "repository": "https://github.com/edmundreinhardt/payroll-bob"
 }
