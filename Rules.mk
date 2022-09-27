@@ -1,1 +1,1 @@
-SUBDIRs := data pgm
+SUBDIRS := data pgm
