@@ -1,0 +1,20 @@
+[
+    {
+        "command": "err=*EVENTF lib1=&CURLIB /QOpenSys/pkgs/bin/makei build -e pgmlib=&CURLIB -e dtalib=PAYDTA_ER",
+        "deployFirst": true,
+        "environment": "pase",
+        "extensions": [
+            "GLOBAL"
+        ],
+        "name": "bob build for payroll"
+    },
+    {
+        "command": "err=*EVENTF /QOpenSys/pkgs/bin/makei compile -f &BASENAME -e pgmlib=&CURLIB -e dtalib=PAYDTA_ER",
+        "deployFirst": true,
+        "environment": "pase",
+        "extensions": [
+            "GLOBAL"
+        ],
+        "name": "bob compile for compile"
+    }
+]
