@@ -1,20 +1,28 @@
 [
-    {
-        "command": "err=*EVENTF lib1=&CURLIB /QOpenSys/pkgs/bin/makei build -e pgmlib=&CURLIB -e dtalib=PAYDTA_ER",
-        "deployFirst": true,
-        "environment": "pase",
-        "extensions": [
-            "GLOBAL"
-        ],
-        "name": "bob build for payroll"
-    },
-    {
-        "command": "err=*EVENTF /QOpenSys/pkgs/bin/makei compile -f &BASENAME -e pgmlib=&CURLIB -e dtalib=PAYDTA_ER",
-        "deployFirst": true,
-        "environment": "pase",
-        "extensions": [
-            "GLOBAL"
-        ],
-        "name": "bob compile for compile"
-    }
+  {
+    "extensions": [
+      "GLOBAL"
+    ],
+    "name": "Build all",
+    "command": "OPT=*EVENTF BUILDLIB=&CURLIB /QOpenSys/pkgs/bin/makei build",
+    "environment": "pase",
+    "deployFirst": true,
+    "postDownload": [
+      ".logs",
+      ".evfevent"
+    ]
+  },
+  {
+    "extensions": [
+      "GLOBAL"
+    ],
+    "name": "Build current",
+    "command": "OPT=*EVENTF BUILDLIB=&CURLIB /QOpenSys/pkgs/bin/makei compile -f &BASENAME",
+    "environment": "pase",
+    "deployFirst": true,
+    "postDownload": [
+      ".logs",
+      ".evfevent"
+    ]
+  }
 ]
