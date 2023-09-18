@@ -250,4 +250,4 @@
      A*%%RS+ <sequence name="MAIN_MENU">
      A*%%RS+  <record-write record-format="SELECT" />
      A*%%RS+ </sequence>
-     A*%%RS </record-sequences> 
+     A*%%RS </record-sequences>

@@ -33,7 +33,7 @@ Dcl-F RSNMST     Usage(*Update:*Delete:*Output) Keyed;
 
 Dcl-S EMESS           Char(50);
 
-/include includes/errorTable.rpgleinc
+/include QPROTOSRC,ERRORTABLE
 
  //
  // *****************************************************
@@ -335,7 +335,7 @@ Dcl-Proc isAddNewRecordRequest;
 End-Proc;
 
 // *******************************************************
-// Return true iff a previously deleted record 
+// Return true iff a previously deleted record
 // should be readded to file
 Dcl-Proc isAddPreviouslyDeletedRecordRequest;
   Dcl-Pi *n ind End-Pi;
@@ -504,4 +504,4 @@ MORE THAN ONE APPLICATION SELECTED FOR MAINTENANCE
    CHANGE REQUESTED BUT RECORD DOES NOT EXIST
      CHANGE REQUESTED BUT RECORD IS DELETED
    DELETE REQUESTED BUT RECORD DOES NOT EXIST
-   DELETE REQUESTED BUT RECORD ALREADY DELETED 
+   DELETE REQUESTED BUT RECORD ALREADY DELETED

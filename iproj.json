@@ -1,14 +1,6 @@
 {
-  "curlib": "&dtalib",
-  "objlib": "&pgmlib",
-  "preUsrlibl": [
-    "&pgmlib"
-  ],
-  "postUsrlibl": [],
-  "setIBMiEnvCmd": [],
-  "includePath": [
-    "includes"
-  ],
-  "repository": "https://github.com/edmundreinhardt/payroll-bob",
-  "compileCommand": "makei c -f {filename}"
+  "description": "Import from QSYS to git",
+  "postUsrlibl": [
+    "PAYROLLORG"
+  ]
 }
