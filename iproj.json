@@ -1,6 +1,7 @@
 {
-  "description": "Import from QSYS to git",
-  "postUsrlibl": [
-    "PAYROLLORG"
+  "description": "Simple interactive payroll file maintenance program",
+  "curlib": "&CURLIB",
+  "preUsrlibl": [
+    "&DTALIB"
   ]
 }

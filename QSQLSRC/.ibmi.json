@@ -1,5 +1,5 @@
 {
     "build": {
-        "tgtCcsid": "37"
+        "objlib": "&DTALIB"
     }
 }

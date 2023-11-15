@@ -33,7 +33,7 @@ Dcl-F RSNMST     Usage(*Update:*Delete:*Output) Keyed;
 
 Dcl-S EMESS           Char(50);
 
-/include QRPGLESRC,ERRORTABLE
+/include QPROTOSRC,ERRORTABLE
 
  //
  // *****************************************************
